@@ -8,20 +8,51 @@
   src: url('../fonts/CooperHewitt-Medium.otf');
 }
 
+.glow {
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #6e00d1, 0 0 35px #6e00d1, 0 0 40px #6e00d1, 0 0 50px #6e00d1, 0 0 60px #6e00d1;
+}
+  /* The "code" below is for the glowing animation.
+   * Unfortunately, this takes a lot of CPU, so I decided to
+   * remove it until I discover a way to overcome this.
+
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #6e00d1, 0 0 30px #6e00d1, 0 0 40px #6e00d1, 0 0 55px #6e00d1, 0 0 75px #6e00d1;
+  }
+
+  to {
+    text-shadow: 0 0 5px #560084, 0 0 20px #004e82, 0 0 20px #001582, 0 0 40px #200082, 0 0 160px #630082;
+  }
+}
+*/
+
 h1{
-  text-align: center;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
 }
 
 body{
-  font-family: GlacialIndifference;
-  font-size: 1.8em;
-  background-color: #191919;
-  color: #fff;
+    font-family: GlacialIndifference;
+    font-size: 2.2em;
+    color: #fff;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    height: 100%;
+    background-color: #121212;
+    background: url("../background/mosh-dark.png") center no-repeat;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 a, a:hover, a:visited{
-  text-decoration: none;
-  color: #3d92db;
+    text-decoration: none;
 }
 
 /* Modal */
@@ -39,21 +70,68 @@ a, a:hover, a:visited{
 
 /* Form Error Messages */
 #ErrorName, #errorUrl{
-  color: #FF0000;
+    color: #FF0000;
 }
 
 .box h3{
-  font-family: CooperHewittMedium;
-  margin-bottom: 0.6em;
-  font-size: 1em;
+    font-family: CooperHewittMedium;
+    font-size: 1.2em;
+    background-color: rgba(0,0,0,0.2);
+    padding-top: 0.2em;
+    padding-bottom: 0.1em;
+    padding-left: 0.1em;
+    
+    -webkit-transition: padding-left 0.3s;
+    transition: padding-left 0.3s;
+}
+
+.box{
+    background-color: rgba(0,0,0,0.3);
+    padding-bottom: 0.1em;
+    margin-top: -0.25em;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.box:hover{
+    background-color: rgba(0,0,0,0.55);
+}
+.box:hover .links{
+    color: #60b5ff;
+}
+.box:hover h3{
+    padding-left: 25%;
+}
+
+.google-icon{
+    display: inline;
+    height: 1.2em;
+    position: absolute;
+    left: auto;
+    right: 49%;
+    color: rgba(0, 255, 255, 0.75);
+}
+.google-icon:hover{
+    transition: color 0.2s;
+    -webkit-transition: color 0.2s;
+}
+
+.links{
+    font-size: 0.95em;
+    color: #3d92db;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.links:hover{
+    color: #00ffff !important;
 }
 
 .url p{
-    padding-left: 0.6em;
+    padding-left: 0.5em;
     -webkit-transition: padding-left 0.3s; /* Safari */
     transition: padding-left 0.3s;
 }
 
 .url p:hover{
-    padding-left: 1em;
+    padding-left: 0.85em;
 }

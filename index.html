@@ -6,15 +6,17 @@
   <title>The Nexus</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styling.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 </head>
 
 <body>
   <div class="container">
-    <h1>The Nexus</h1>
+    <h1 class="glow">The Nexus</h1>
+    <div class="bg-image"></div>
     <!-- Search bar, redirects to google -->
     <form action="https://google.com/search?" method="get">
       <div class="form-group">
-        <input type="text" name="q" class="form-control" placeholder="Search">
+        <input type="text" name="q" class="form-control" placeholder="Google">
       </div>
     </form>
     <!-- End of search bar  -->
@@ -31,6 +33,13 @@
         <span class="glyphicon glyphicon-save-file downloadSites"></span></span>
       <span title="Upload saved sites">
         <span class="glyphicon glyphicon-open-file uploadFile"></span></span>
+      <span title="Google">
+        <span>
+            <a href="https://google.com" target="_self" rel="noopener" class="google-icon">
+                <i class='fab fa-google' style='font-size:28px'></i>
+            </a>
+        </span>
+      </span>
       <form id="fileForm">
         <input type="file" id="fileElem" multiple accept=".txt" style="display:none">
       </form>
@@ -104,12 +113,12 @@
     <script type="text/template" id="UrlTemplate">
       <div class="wrapperUrl">
         <p>
-          <a href="<%= url %>" target="_blank" rel="noopener">
+          <a href="<%= url %>" target="_self" rel="noopener" class="links">
             <%= name %>
           </a>
           <!-- Icons to edit and delete only visibles on hover, see scripts.js -->
-          <span style="display: none" class="glyphicon glyphicon-pencil editSite" title="Click to edit">
-            </span> <span style="display: none" class="glyphicon glyphicon-minus-sign deleteSite" title="Double click to delete"> </span>
+          <span style="display: none; font-size:15px" class="glyphicon glyphicon-pencil editSite" title="Click to edit">
+          </span> <span style="display: none; font-size:15px" class="glyphicon glyphicon-minus-sign deleteSite" title="Double click to delete"> </span>
         </p>
       </div>
     </script>
@@ -144,7 +153,7 @@
   <!-- Error Modal -->
   <div class="modal fade" id="errorModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
@@ -158,7 +167,7 @@
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-      
+
     </div>
   </div>
 

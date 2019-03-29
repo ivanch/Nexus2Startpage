@@ -94,11 +94,15 @@ var UrlListView = Backbone.View.extend({
     this.$el.html('') // Cleans all the HTML to prevent stacking the websites
     var counter = 0
     // Convert the collection to an array and iterate over it
-    // Sort the array alphabeticaly using sortBy
     // It prevents changing the section's order after a model has been edited
+
+    /* Sort alphabeticaly */
+    /*
     _.each(_.sortBy(this.model.toArray(), function (element) {
       return element.get('section')
     }), function (site) {
+  */
+      _.each(this.model.toArray(), function (site) {
       if ($('#' + site.get('section')).length > 0) {
         // If the section already exist, append the new website to it
         $('#' + site.get('section')).append(new vistaURL({
