@@ -10,6 +10,9 @@
 </head>
 
 <body>
+
+  <div class="container main-container">
+
     <div id="todo">
         <!-- Start of Add Modal -->
         <div id="divAddTodo" class="modal fade" role="dialog">
@@ -45,17 +48,18 @@
             </div>
         </div>
         <!-- End of Add Modal -->
+        
         <h2>
+            TODO:
             <span data-toggle="modal" data-target="#divAddTodo" title="Add a task">
             <span class="glyphicon glyphicon-plus addTodo" style="font-size: 0.7em !important;"></span></span>
-            TODO:
         </h2>
-        <ul id="todoList">
+        <hr id="header-separator">
+        <ul id="todoList" class="fa-ul">
             <!-- Generated with JS -->
         </ul>
     </div>
 
-  <div class="container">
     <h1 class="glow">The Nexus</h1>
     <div class="bg-image"></div>
     <!-- Search bar, redirects to google -->

@@ -137,30 +137,76 @@ a, a:hover, a:visited{
 
 .url p:hover{
     padding-left: 0.85em;
-    font-size: 1.1em;
+    font-size: 1.05em;
 }
 
 .container{
     padding: 1em;
 }
 
+.main-container{
+    position: relative;
+}
+
 #todo{
-    float: right;
-    padding-top: 1em;
-    padding-right: 2em;
-    z-index: 1;
-    border-color: black;
-    border: 1em;
+    position: absolute;
+    float: left;
+    width: 15em;
+    left: -15em;
+    top: 0;
+    margin-top: 6.1em;
+    /*z-index: 1;*/
+
+    /* Style */
+    background: #0000004d;
+    border-style: double;
+    border-color: #6e00d1;
+    border-radius: 5px;
+    border-width: 5px;
 }
 
 #todo h2{
     text-align: center;
+    margin-top: 0.25em;
+    margin-right: 1em;
+}
+
+#todo hr{
+    margin-top: -0.1em;
+    margin-bottom: 0.25em;
+    border-color: #6e00d1;
+    border-width: 2.5px;
+}
+
+.addTodo{
+    float: left;
+    padding-left: 1em;
+    padding-top: 0.25em;
+}
+
+#todo ul{
+    margin-left: 1.5em;
+    margin-right: 0em;
+    padding-right: 0em;
 }
 
 #todo ul li{
-    transition: 0.75s;
+    left: 0;
+    transition: background-color 0.35s, font-size 0.75s;
+    transition: transform 0.5s ease;
+    padding-left: 0.15em;
+    max-width: 12em;
 }
 
 #todo ul li:hover{
-    background-color: #a5a5a571;
+    background-color: #7575759c;
+}
+
+.urgent{
+    color: rgb(255, 125, 125);
+}
+
+.fa-li{
+    font-size: 0.75em;
+    padding-top: 0.35em;
 }
