@@ -15,13 +15,13 @@ function showTodo(){
         todoNode.id = "todo_" + i;
         todoNode.classList.add("urgent");
         var todoSpan = document.createElement("span");
-        todoSpan.title = todoList[i].desc;
         todoSpan.classList.add("fa-li");
         var todoIcon = document.createElement("i");
         todoIcon.classList.add("fas");
         todoIcon.classList.add("fa-asterisk");
         todoSpan.appendChild(todoIcon);
         todoNode.appendChild(todoSpan);
+        todoNode.setAttribute("title",todoList[i].desc);
         todoNode.appendChild(document.createTextNode(todoList[i].title));
         todoNode.setAttribute("onclick","clickTodo("+i+")")
         $('#todoList').append(todoNode);
@@ -32,13 +32,13 @@ function showTodo(){
         var todoNode = document.createElement("li");
         todoNode.id = "todo_" + i;
         var todoSpan = document.createElement("span");
-        todoSpan.title = todoList[i].desc;
         todoSpan.classList.add("fa-li");
         var todoIcon = document.createElement("i");
         todoIcon.classList.add("fas");
         todoIcon.classList.add("fa-circle");
         todoSpan.appendChild(todoIcon);
         todoNode.appendChild(todoSpan);
+        todoNode.setAttribute("title",todoList[i].desc);
         todoNode.appendChild(document.createTextNode(todoList[i].title));
         todoNode.setAttribute("onclick","clickTodo("+i+")")
         $('#todoList').append(todoNode);

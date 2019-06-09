@@ -13,24 +13,6 @@
     color: #fff;
     text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #6e00d1, 0 0 35px #6e00d1, 0 0 40px #6e00d1, 0 0 50px #6e00d1, 0 0 60px #6e00d1;
 }
-  /* The "code" below is for the glowing animation.
-   * Unfortunately, this takes a lot of CPU, so I decided to
-   * remove it until I discover a way to overcome this.
-
-  -webkit-animation: glow 2s ease-in-out infinite alternate;
-  -moz-animation: glow 2s ease-in-out infinite alternate;
-  animation: glow 2s ease-in-out infinite alternate;
-}
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #6e00d1, 0 0 30px #6e00d1, 0 0 40px #6e00d1, 0 0 55px #6e00d1, 0 0 75px #6e00d1;
-  }
-
-  to {
-    text-shadow: 0 0 5px #560084, 0 0 20px #004e82, 0 0 20px #001582, 0 0 40px #200082, 0 0 160px #630082;
-  }
-}
-*/
 
 h1{
     text-align: center;
@@ -46,7 +28,7 @@ body{
     top: 0; bottom: 0; left: 0; right: 0;
     height: 100%;
     background-color: #121212;
-    background: url("../background/mosh-dark.png") center no-repeat;
+    background: url("../background/bg.jpg") center no-repeat;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -76,19 +58,21 @@ a, a:hover, a:visited{
 .box h3{
     font-family: CooperHewittMedium;
     font-size: 1.2em;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
     padding-top: 0.2em;
     padding-bottom: 0.1em;
     padding-left: 0.1em;
+    margin-top: 0.2em;
     
-    -webkit-transition: padding-left 0.3s;
-    transition: padding-left 0.3s;
+    -webkit-transition: font-size 0.3s;
+    transition: font-size 0.3s;
+    text-align: center;
 }
 
 .box{
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.4);
     padding-bottom: 0.1em;
-    margin-top: -0.25em;
+    margin-top: 0.5em;
     -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
 }
@@ -97,10 +81,7 @@ a, a:hover, a:visited{
     background-color: rgba(0,0,0,0.55);
 }
 .box:hover .links{
-    color: #60b5ff;
-}
-.box:hover h3{
-    padding-left: 25%;
+    color: #00ff00;
 }
 
 .google-icon{
@@ -118,7 +99,7 @@ a, a:hover, a:visited{
 
 .links{
     font-size: 0.95em;
-    color: #3d92db;
+    color: rgb(0, 190, 0);
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
     -webkit-transition: font-size 0.1s;
@@ -126,18 +107,18 @@ a, a:hover, a:visited{
 }
 
 .links:hover{
-    color: #00ffff !important;
+    color: #00ff00 !important;
 }
 
 .url p{
     padding-left: 0.5em;
-    -webkit-transition: padding-left 0.3s; /* Safari */
+    -webkit-transition: padding-left 0.3s;
     transition: padding-left 0.3s;
 }
 
 .url p:hover{
     padding-left: 0.85em;
-    font-size: 1.05em;
+    font-size: 1.075em;
 }
 
 .container{
@@ -190,16 +171,20 @@ a, a:hover, a:visited{
     padding-right: 0em;
 }
 
+#todo ul .urgent:hover{
+    color: #FF0000;
+}
+
 #todo ul li{
     left: 0;
-    transition: background-color 0.35s, font-size 0.75s;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease, color 0.25s ease;
     padding-left: 0.15em;
     max-width: 12em;
+    border-radius: 2px;
 }
 
 #todo ul li:hover{
-    background-color: #7575759c;
+    background-color: #5555559c;
 }
 
 .urgent{

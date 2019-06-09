@@ -1,2 +1,4 @@
-sitesBackup.txt
 js/sections.js
+.vscode
+.stfolder
+*.txt
